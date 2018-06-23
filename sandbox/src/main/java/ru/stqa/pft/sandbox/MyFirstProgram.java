@@ -6,12 +6,17 @@ public class MyFirstProgram {
     hello("world"); //вызов функции hello с конкретным параметром
     hello("user");
 
-    double l = 5;
-    System.out.println("Площадь квадрата со стороной " + l + " = " + area(l));
+    Square s = new Square(5); //создаем новый объект класса
+                                  //переменные класса определены сразу потому что использовали конструктор
+    System.out.println("Площадь квадрата со стороной " + s.l + " = " + area(s)); //возвращаем объект
 
-    double a = 4;
-    double b = 6;
-    System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a,b));
+//до использования конструктора
+//    Rectangle r = new Rectangle(); //создаем новый объект класса
+//    r.a = 4;                       //определяем переменные класса
+//    r.b = 6;
+    Rectangle r = new Rectangle(4,6); //создание объекта: длины сторон прямоугольника 4 и 6
+                                           // передаются в качестве параметров в конструктор
+    System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + area(r));
 
   }
 
@@ -20,11 +25,11 @@ public class MyFirstProgram {
     System.out.println("Hello," + somebody + "!");
   }
 
-  public static double area(double l) {
-    return l*l;
+  public static double area(Square s) { //функция которая обращается к классу квадрат
+    return s.l*s.l;                     //используются переменные класса
   }
 
-  public static double area(double a, double b) {
-    return a*b;
+  public static double area(Rectangle r) {
+    return r.a*r.b;
   }
 }
