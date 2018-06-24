@@ -22,12 +22,8 @@ public class MyFirstProgram {
     Rectangle r = new Rectangle(4,6); //создание объекта: длины сторон прямоугольника 4 и 6 передаются в качестве параметров в конструктор
     System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area()); //объект r типа  rectangle
 
-    Point p1 = new Point();
-    Point p2 = new Point();
-    p1.x = 1;
-    p1.y = 4;
-    p2.x = 9;
-    p2.y = 12;
+    Point p1 = new Point(1,4);
+    Point p2 = new Point(9,12);
     System.out.println("Pасстояние от (" + p1.x + "," + p1.y + ") до (" + p2.x + "," + p2.y + ") = " + distance(p1, p2));
 
   }
