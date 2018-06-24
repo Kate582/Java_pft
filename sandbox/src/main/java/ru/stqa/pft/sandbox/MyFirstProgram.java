@@ -8,7 +8,7 @@ public class MyFirstProgram {
 
     Square s = new Square(5); //создаем новый объект класса
                                 //переменные класса определены сразу потому что использовали конструктор
-//но чтобы вместо функции вызвать метод,, делаем так:
+//чтобы вместо функции вызвать метод, делаем так:
 //area(s)  -> s.area()
 //то есть обращаемся к метода также как обращались к атрибуту. пример обращения в атрибуту:  s.l
 //перед методом необходим объект, для которого метод вызывается
@@ -24,7 +24,7 @@ public class MyFirstProgram {
 
     Point p1 = new Point(1,4);
     Point p2 = new Point(9,12);
-    System.out.println("Pасстояние от (" + p1.x + "," + p1.y + ") до (" + p2.x + "," + p2.y + ") = " + distance(p1, p2));
+    System.out.println("Pасстояние от (" + p1.x + "," + p1.y + ") до (" + p2.x + "," + p2.y + ") = " + p1.distance(p2));
 
   }
 
@@ -33,8 +33,8 @@ public class MyFirstProgram {
     System.out.println("Hello," + somebody + "!");
   }
 
-  public static double distance(Point p1, Point p2) {
-    return Math.sqrt(((p1.x-p2.x)*(p1.x-p2.x)) + ((p1.y-p2.y)*(p1.y-p2.y)));
+// функция для расстояния
+
   }
 
 //функция находится тут пока она функция.
@@ -48,4 +48,3 @@ public class MyFirstProgram {
 //  public static double area(Rectangle r) {
 //    return r.a*r.b;
 //  }
-}
