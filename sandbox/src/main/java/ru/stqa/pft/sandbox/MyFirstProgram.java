@@ -19,15 +19,26 @@ public class MyFirstProgram {
 //    Rectangle r = new Rectangle(); //создаем новый объект класса
 //    r.a = 4;                       //определяем переменные класса
 //    r.b = 6;
-    Rectangle r = new Rectangle(4,6); //создание объекта: длины сторон прямоугольника 4 и 6
-                                           // передаются в качестве параметров в конструктор
+    Rectangle r = new Rectangle(4,6); //создание объекта: длины сторон прямоугольника 4 и 6 передаются в качестве параметров в конструктор
     System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area()); //объект r типа  rectangle
+
+    Point p1 = new Point();
+    Point p2 = new Point();
+    p1.x = 1;
+    p1.y = 4;
+    p2.x = 9;
+    p2.y = 12;
+    System.out.println("Pасстояние от (" + p1.x + "," + p1.y + ") до (" + p2.x + "," + p2.y + ") = " + distance(p1, p2));
 
   }
 
   public static void hello(String somebody) { //функция hello c параметром string
                                               //void - не возвращает значений
     System.out.println("Hello," + somebody + "!");
+  }
+
+  public static double distance(Point p1, Point p2) {
+    return Math.sqrt(((p1.x-p2.x)*(p1.x-p2.x)) + ((p1.y-p2.y)*(p1.y-p2.y)));
   }
 
 //функция находится тут пока она функция.
