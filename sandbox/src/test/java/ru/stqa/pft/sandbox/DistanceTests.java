@@ -14,6 +14,6 @@ public class DistanceTests {
     Point p1 = new Point(1,5);
     Point p2 = new Point(7,2);
     String formattedDouble = new DecimalFormat("#0.00").format(p1.distance(p2));
-    Assert.assertEquals(formattedDouble, "6.71");
+    Assert.assertEquals(formattedDouble, "6.72");
   }
 }
