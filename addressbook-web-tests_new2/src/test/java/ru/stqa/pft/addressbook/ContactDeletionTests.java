@@ -17,7 +17,7 @@ import static org.openqa.selenium.OutputType.*;
 
 public class ContactDeletionTests {
     FirefoxDriver wd;
-    
+
     @BeforeMethod
     public void setUp() throws Exception {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
@@ -31,7 +31,7 @@ public class ContactDeletionTests {
         wd.findElement(By.name("pass")).sendKeys("secret");
         wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
     }
-    
+
     @Test
     public void testContactDeletion() {
         wd.findElement(By.linkText("home")).click();
@@ -39,12 +39,12 @@ public class ContactDeletionTests {
         wd.findElement(By.xpath("//div[@id='content']/form[2]/div[2]/input")).click();
         wd.findElement(By.linkText("home")).click();
     }
-    
+
     @AfterMethod
     public void tearDown() {
         wd.quit();
     }
-    
+
     public static boolean isAlertPresent(FirefoxDriver wd) {
         try {
             wd.switchTo().alert();
