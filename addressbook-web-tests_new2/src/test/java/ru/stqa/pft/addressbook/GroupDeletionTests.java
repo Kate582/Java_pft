@@ -22,10 +22,6 @@ public class GroupDeletionTests {
     public void setUp() throws Exception {
         wd = new FirefoxDriver(new FirefoxOptions().setLegacy(true));
         wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-    }
-    
-    @Test
-    public void GroupDeletionTests() {
         wd.get("http://localhost:8080/addressbook/index.php");
         wd.findElement(By.name("user")).click();
         wd.findElement(By.name("user")).clear();
@@ -34,6 +30,10 @@ public class GroupDeletionTests {
         wd.findElement(By.name("pass")).clear();
         wd.findElement(By.name("pass")).sendKeys("secret");
         wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
+    }
+    
+    @Test
+    public void testGroupDeletion() {
         wd.findElement(By.linkText("groups")).click();
         wd.findElement(By.name("selected[]")).click();
         wd.findElement(By.xpath("//div[@id='content']/form/input[5]")).click();
